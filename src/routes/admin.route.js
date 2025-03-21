@@ -3,6 +3,7 @@ import { addFaculty, getFaculty, getSpecificFaculty } from "../controllers/facul
 import { addMultipleStudents, addStudent, batchStudents, getSpecificStudent, getStudents } from "../controllers/student.controller.js";
 import { addSubject, addSubjects, getSpecificSubject, getSpecificSubjects, getSubjects } from "../controllers/subject.controller.js";
 import { addBatchEnrollments, addEnrollment, addSpecificEnrollments } from "../controllers/enrollment.controller.js";
+import { addSemesterInfo } from "../controllers/semester.controller.js";
 
 export const adminRouter = express.Router()
 
@@ -25,3 +26,5 @@ adminRouter.get("/subject/:id", getSpecificSubject)
 adminRouter.post("/enroll", addEnrollment)
 adminRouter.post("/enroll/batch", addBatchEnrollments)
 adminRouter.post("/enroll/specific", addSpecificEnrollments)
+
+adminRouter.post("/semester", addSemesterInfo)
